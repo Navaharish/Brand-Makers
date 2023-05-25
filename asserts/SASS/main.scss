@@ -17,7 +17,9 @@
 
 @use"../SASS/ABSTRACTS/function";
 
+//components
 
+@use"../SASS/COMPONENTS/button";
 
 //LAYOUT
 
@@ -27,7 +29,11 @@
 
 @use"../SASS/LAYOUTS/forms";
 
+@use"../SASS/LAYOUTS/bg-animation";
 
-//components
 
-@use"../SASS/COMPONENTS/button";
+//PAGES
+
+@use"../SASS/PAGES/hero";
+
+@use"../SASS/PAGES/about";
