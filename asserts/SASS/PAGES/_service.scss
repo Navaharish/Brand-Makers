@@ -1,0 +1,75 @@
+@use"../ABSTRACTS/function" as func;
+
+.service {
+    padding: 5rem 10rem;
+
+    &-header {
+        text-align-last: center;
+        margin-bottom: 2rem;
+
+        & h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        & p {
+            font-size: 1rem;
+            color: grey;
+        }
+
+        & .line {
+            width: 7.5rem;
+            height: 10px;
+            border-radius: 10px;
+            margin: 35px auto;
+
+            background: linear-gradient(to right, red, blue);
+        }
+    }
+
+    &-cards {
+        display: flex;
+        justify-content: space-around;
+
+        overflow: hidden;
+
+    }
+
+
+
+    &-card {
+        width: 50rem;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 1rem;
+        box-shadow: 10px 10px 8px 10px #888888;
+
+
+        &:hover {
+            box-shadow: 2px 2px 8px 10px rgb(61, 206, 255);
+            border: 2px solid func.theme-colors();
+        }
+
+
+        & h2 {
+            padding-top: 1rem;
+            text-align: center;
+
+        }
+
+
+        &--body {
+            text-align: center;
+            padding: 1rem 2rem 2rem;
+            color: rgb(70, 70, 70);
+        }
+
+        & button {
+
+            display: block;
+            margin: 0 7rem 2rem 7rem;
+
+
+        }
+    }
+}

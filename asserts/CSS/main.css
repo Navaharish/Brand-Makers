@@ -598,6 +598,19 @@ body {
   font-size: 1.5rem;
 }
 
+.primary-badge {
+  background-color: #046bd2;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 6px;
+}
+
+.disable {
+  color: grey;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -650,6 +663,26 @@ li {
   font-weight: 600;
 }
 
+.btn-outline-hover-primary {
+  background-color: #046bd2;
+  border-radius: 5px;
+  padding: 15px 20px;
+  line-height: 1;
+  transition: 0.5s;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn-outline-hover-primary:hover {
+  padding: 13px 20px;
+  border: 2px solid #046bd2;
+  color: #046bd2;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: transparent;
+}
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -695,6 +728,56 @@ li {
 }
 .header .active {
   color: rgb(14, 110, 149);
+}
+
+.form {
+  background-color: #e0e0e0;
+}
+.form-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0rem;
+  margin: 5rem 10rem;
+  box-shadow: 10px 10px 8px 10px #888888;
+  background-color: #fff;
+}
+.form-area h2 {
+  font-size: 2rem;
+}
+.form-area p {
+  font-size: 1rem;
+  color: grey;
+  margin-bottom: 4rem;
+}
+.form-area img {
+  margin-top: 10rem;
+  margin-right: 5rem;
+}
+.form-area button {
+  width: 100%;
+  margin-top: 20px;
+}
+.form-control {
+  display: block;
+  padding: 1rem 6rem;
+  flex-grow: 1;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #888888;
+  outline: none;
+}
+.form-control:hover {
+  border: 1px solid #046bd2;
+  box-shadow: 5px 5px 4px 5px #888888;
+}
+.form-card {
+  margin: 2rem;
+  padding: 4rem;
+  border-radius: 8px;
+  width: 100%;
+}
+.form-card select {
+  font-size: 1rem;
 }
 
 main .box1 {
@@ -877,8 +960,89 @@ main .box1 {
 }
 .about-area--info {
   color: #fff;
+  padding-right: 2.5rem;
 }
 .about-area--info h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   padding-bottom: 0.5rem;
+  line-height: 1.5;
+}
+.about-area--info p {
+  color: #cfcfcf;
+}
+.about-area--info p em {
+  color: rgba(255, 255, 255, 0.8823529412);
+}
+
+.service {
+  padding: 5rem 10rem;
+}
+.service-header {
+  -moz-text-align-last: center;
+       text-align-last: center;
+  margin-bottom: 2rem;
+}
+.service-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.service-header p {
+  font-size: 1rem;
+  color: grey;
+}
+.service-header .line {
+  width: 7.5rem;
+  height: 10px;
+  border-radius: 10px;
+  margin: 35px auto;
+  background: linear-gradient(to right, red, blue);
+}
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.service-card {
+  width: 50rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1rem;
+  box-shadow: 10px 10px 8px 10px #888888;
+}
+.service-card:hover {
+  box-shadow: 2px 2px 8px 10px rgb(61, 206, 255);
+  border: 2px solid #046bd2;
+}
+.service-card h2 {
+  padding-top: 1rem;
+  text-align: center;
+}
+.service-card--body {
+  text-align: center;
+  padding: 1rem 2rem 2rem;
+  color: rgb(70, 70, 70);
+}
+.service-card button {
+  display: block;
+  margin: 0 7rem 2rem 7rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 10rem;
+  align-items: center;
+}
+.contact-details {
+  box-shadow: 10px 10px 8px 10px #888888;
+  margin-bottom: 100px;
+  margin-top: 20px;
+}
+.contact-detail {
+  box-shadow: 10px 10px 8px 10px #888888;
+  padding: 30px;
+  margin: 30px;
+}
+.contact-detail:hover {
+  box-shadow: 15px 15px 10px 12px #888888;
 }/*# sourceMappingURL=main.css.map */

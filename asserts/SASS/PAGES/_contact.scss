@@ -1,0 +1,26 @@
+@use"../ABSTRACTS/function" as func;
+
+.contact {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+    align-items: center;
+
+    &-details {
+        box-shadow: 10px 10px 8px 10px #888888;
+        margin-bottom: 100px;
+        margin-top: 20px;
+    }
+
+    &-detail {
+        box-shadow: 10px 10px 8px 10px #888888;
+        padding: 30px;
+
+        margin: 30px;
+
+        &:hover {
+            box-shadow: 15px 15px 10px 12px #888888;
+        }
+    }
+}
