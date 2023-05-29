@@ -38,50 +38,66 @@
 
         <div class="header-brand">
             <img src="./asserts/IMAGES/logo.png" alt="Brandmakers-logo" class="header-brand--logo">
-            <span class="header-brand--name ">
+            <span class="header-brand--name">
                 BRAND MAKERS <span class="color-animation">{ web developers }</span>
+
             </span>
         </div>
 
-        <ul class="header-menu">
-            <li class="header-menu--item">
-                <a href="#" class="header-menu--link active">home</a>
-            </li>
+        <div>
+            <div class="nav-toggler">
+                <i class="fas fa-bars header--bars"></i>
+                <i class="fas fa-times header--tites"></i>
+            </div>
+            <ul class="header-menu">
+
+                <li class="header-menu--item">
+                    <a href="#hero" class="header-menu--link active">home</a>
+                </li>
 
 
 
-            <li class="header-menu--item">
-                <a href="#" class="header-menu--link">About us</a>
-            </li>
+                <li class="header-menu--item">
+                    <a href="#about" class="header-menu--link">About us</a>
+                </li>
 
-            <li class="header-menu--item">
-                <a href="#" class="header-menu--link">our service</a>
-            </li>
-            <li class="header-menu--item">
-                <a href="#" class="header-menu--link">contact us</a>
-            </li>
-            <button class="btn-primary color-animation">
-                <a href="#" class="header-menu--link">Regester</a>
-            </button>
+                <li class="header-menu--item">
+                    <a href="#service" class="header-menu--link">our service</a>
+                </li>
+                <li class="header-menu--item">
+                    <a href="#contact" class="header-menu--link">contact us</a>
+                </li>
+                <li>
+                    <a href="#register" class=" btn-primary ">Regester</a>
+                </li>
 
-        </ul>
+
+
+            </ul>
+        </div>
+
+
+
     </header>
     <!-- ========== End navbar ========== -->
 
 
     <!-- ========== Start Hero section ========== -->
     <main>
-        <section class="hero">
-            <div class="box1"></div>
-            <div class="box2"></div>
-            <div class="box-3"> </div>
-            <div class="leaf-1"> </div>
-            <div class="leaf-2"> </div>
-            <div class="cone1"></div>
-            <div class="cone2"></div>
+        <section class="hero" id="hero">
+            <span class="bg-animation">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box-3"> </div>
+                <div class="leaf-1"> </div>
+                <div class="leaf-2"> </div>
+                <div class="cone1"></div>
+                <div class="cone2"></div>
 
-            <div class="dot1"></div>
-            <div class="dot2"></div>
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </span>
+
 
             <div>
                 <caption class="hero-caption">
@@ -95,8 +111,8 @@
                     </p>
                 </caption>
                 <div class="hero-btn  mt-3">
-                    <button class="btn-primary"><i class="far fa-id-badge mr-1 fs-2"></i> Contact us</button>
-                    <button class="btn-outline-primary">Register Now</button>
+                    <a href="#contact" class="btn-primary"><i class="far fa-id-badge mr-1 fs-2"></i> Contact us</a>
+                    <a href="#register" class="btn-outline-primary">Register Now</a>
 
                 </div>
 
@@ -109,13 +125,13 @@
         <!-- ========== End Hero section ========== -->
 
         <!-- ========== Start About page ========== -->
-        <section class="about-area">
+        <section class="about-area" id="about">
 
-            <img src="./asserts/IMAGES/aboutus.png" alt="about us-img" class="about-area--img">
+            <img src="./asserts/IMAGES/brandmakers-aboutus .png" alt="about us-img" class="about-area--img">
 
             <div class="about-area--info">
                 <caption>
-                    <h2 class="my-1">Build your professional website for free </h2>
+                    <h2>Build your professional website for free </h2>
                     <p>
                         Having a website <b><em>makes you look professional and increases trust</em></b>. Most people
                         don't
@@ -136,7 +152,7 @@
         <!-- ========== End About page ========== -->
 
         <!-- ========== Start service page ========== -->
-        <section class="service">
+        <section class="service" id="service">
             <div class="service-header">
                 <h2> Our Services For you! </h2>
                 <p>
@@ -222,9 +238,9 @@
         <!-- ========== End service page ========== -->
 
         <!-- ========== Start contact us ========== -->
-        <section class="contact">
+        <section class="contact" id="contact">
 
-            <img src="./asserts/IMAGES/contact-img.jpg" alt="brand makers contact us" width="50%">
+            <img src="./asserts/IMAGES/contact-img.jpg" alt="brand makers contact us" class="contact-img">
 
             <div class="contact-details">
                 <div class="contact-detail">
@@ -244,52 +260,94 @@
         <!-- ========== End contact us ========== -->
 
         <!-- ========== Start regiter now ========== -->
-        <section class="form">
-            <div class="form-area">
-
-                <form action="#" method="post" class="form-card">
+        <section class="register" id="register">
+            <div class="register-card">
+                <div>
                     <h2>Send your Requirements 📩</h2>
                     <p>Explain detialy about your requirements</p>
-                    <label for="name">Name :</label>
-                    <input type="text" name="name" placeholder="Your Name" class="form-control" required
-                        aria-required="true">
 
-                    <label for="email">Email :</label>
-                    <input type="email" name="Email" id="email" placeholder="Your Email" class="form-control" required
-                        aria-required="true">
-                    <label for="#website-type">TYPE OF WEBSITE :</label>
-                    <select name="website-type" id="website-type" class="form-control disable">
-                        <option value="" class="disable">select Type of your website</option>
+                    <form class="register-card--form" onsubmit=sendEmail()>
 
-                        <option value="">Static website</option>
-                        <option value="">personal webpage</option>
+                        <label for="name">Name :</label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" class="form-control" required
+                            aria-required="true">
 
-                        <option value="">business</option>
+                        <label for="email">Email :</label>
+                        <input type="email" name="Email" id="email" placeholder="Your Email" class="form-control"
+                            required aria-required="true">
+                        <label for="#website-type">TYPE OF WEBSITE :</label>
+                        <select name="website-type" id="website-type" class="form-control disable">
+                            <option value="" class="disable">select Type of your website</option>
 
-                        <option value="">E-Commerce</option>
+                            <option value="Static website">Static website</option>
+                            <option value="Static website">Static website</option>
 
-                        <option value="">online Store</option>
-                        <option value="">Non profit organisation</option>
-                        <option value="">Dynamic Website</option>
-                        <option value="">Dynamic Website</option>
-                    </select>
+                            <option value="business">business</option>
 
-                    <textarea name="text" id="need" cols="30" rows="10" placeholder="share your needs in detial"
-                        class="form-control">
-                        </textarea>
+                            <option value="E-Commerce">E-Commerce</option>
 
-                    <button class="btn-outline-hover-primary">Submit</button>
-                </form>
+                            <option value="online Store">online Store</option>
+                            <option value="Non profit organisation">Non profit organisation</option>
+                            <option value="Dynamic Website">Dynamic Website</option>
+                            <option value="Blogs">Blogs</option>
+                        </select>
+
+                        <textarea class="form-control no-resize" id="website-msg"
+                            placeholder="Share your needs in detail" rows="10" cols="27" required></textarea>
+
+                        <button class="btn-outline-hover-primary">Submit</button>
+                    </form>
+
+                </div>
 
 
+                <div class="register-card--img">
+                    <img src="./asserts/IMAGES/brandmakers-contact.png" alt="brand makers register img"
+                        class="register-card--img">
+                </div>
 
-                <img src="./asserts/IMAGES/brandmakers-contact.png" alt="brand makers register img" width="50%"
-                    height="0%">
             </div>
         </section>
         <!-- ========== End regiter now ========== -->
 
     </main>
+    <!-- ========== Start main js link tag ========== -->
+    <script src="./asserts/JS/main.js"></script>
+
+    <!-- ========== End main js link tag ========== -->
+
+    <!-- ========== Start form info sender API ========== -->
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "navaharish2005@gmail.com",
+                Password: "5A939F5AD1A2FE34C709344DF3F5023AEA5A",
+                To: 'brandmakers196@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "website needs enquiry",
+                Body: "Name : " + document.getElementById("name").value + "<br> Email:" + document.getElementById("email").value + " <br> website-type :" + document.getElementById("website-type").value + " <br> website-requirements :" + document.getElementById("website-msg").value
+            }).then(
+                message => console.log("Requist sent successfully")
+            );
+        }
+
+    </script>
+
+    <!-- ========== End form info sender API ========== -->
+
 </body>
+<!-- ========== Start footer section ========== -->
+<footer>
+    <h1>Brand Makers <span>{web developer 😊}</span> </h1>
+    <p class="mb-1">Presenting with love by brandmakers ❤️</p>
+    <h3>Developers:</h3>
+    <p class="mb-1">Dhinesh ,Navaharish</p>
+    &copy; 2023-All rights are reseved
+</footer>
+
+<!-- ========== End footer section ========== -->
 
 </html>

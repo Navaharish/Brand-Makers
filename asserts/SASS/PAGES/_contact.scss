@@ -1,23 +1,57 @@
 @use"../ABSTRACTS/function" as func;
 
+@use"../ABSTRACTS/mixins" as mixins;
+
 .contact {
 
     display: flex;
     justify-content: space-between;
+
     padding: 1rem 10rem;
     align-items: center;
+
+    @include mixins.responsive(xs) {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0rem;
+        margin: 0rem 0rem;
+        align-items: start;
+    }
+
+
+    &-img {
+        width: 50%;
+        height: 50%;
+        padding-bottom: 7rem;
+
+        @include mixins.responsive(xs) {
+            width: 100%;
+            padding: 0rem 0rem;
+        }
+
+    }
 
     &-details {
         box-shadow: 10px 10px 8px 10px #888888;
         margin-bottom: 100px;
         margin-top: 20px;
+
+        @include mixins.responsive(xs) {
+            width: 100%;
+            padding: 0rem 0rem;
+        }
     }
 
     &-detail {
         box-shadow: 10px 10px 8px 10px #888888;
         padding: 30px;
+        border-radius: 2px;
+        margin: 40px 30px;
 
-        margin: 30px;
+        @include mixins.responsive(xs) {
+            padding: 15px;
+
+        }
 
         &:hover {
             box-shadow: 15px 15px 10px 12px #888888;

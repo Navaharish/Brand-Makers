@@ -1,0 +1,26 @@
+@use"../ABSTRACTS/function" as func;
+@use"../ABSTRACTS/mixins" as mixins;
+
+footer {
+    background-color: func.theme-colors();
+    color: #fff;
+    padding: 2rem 5rem;
+    line-height: 2;
+    text-align: center;
+    padding: 1rem 20rem;
+
+    @include mixins.responsive(xs) {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0rem;
+    }
+
+    & h1 {
+        font-size: 20px;
+
+        @include mixins.responsive(xs) {
+            font-size: 18px;
+        }
+    }
+
+}

@@ -1,26 +1,30 @@
 @use"../ABSTRACTS/function" as func;
 @use"../ABSTRACTS/variable" as var;
+@use"../ABSTRACTS/mixins" as mixins;
 
 //header-btn
 .btn-primary {
     background-color: func.theme-colors();
     border-radius: 5px;
-    padding: 15px 20px;
+    padding: 12px 24px;
     line-height: 1;
     transition: 0.5s;
     color: white;
     font-weight: 600;
     cursor: pointer;
 
+
     a {
         color: white;
         word-spacing: 4px;
-        font-weight: 600;
+        font-weight: 400;
 
     }
 
     &:hover {
         background-color: func.theme-colors(primary-hover);
+
+
     }
 
 }
@@ -28,22 +32,23 @@
 //btn-utline-primary
 
 .btn-outline-primary {
-    padding: 13px 20px;
+    padding: 12px 20px;
     border: 2px solid func.theme-colors();
     color: func.theme-colors();
     border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.8s;
+    font-size: 2px;
+    line-height: 1.8;
 
     &:hover {
         background-color: func.theme-colors();
         border-radius: 5px;
-        padding: 15px 20px;
-        line-height: 1;
-        transition: 0.5s;
+        padding: 12px 20px;
+
+
         color: white;
-        font-weight: 600;
 
     }
 }

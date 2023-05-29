@@ -1,72 +1,78 @@
 @use"../ABSTRACTS/function" as func;
 
-.form {
-    background-color: #e0e0e0;
+@use"../ABSTRACTS/mixins" as mixins;
 
-    &-area {
+.register {
+    background-color: rgb(181, 181, 181);
+    padding: 5rem 10rem;
+
+    @include mixins.responsive(xs) {
+        width: 100%;
+        padding: 3rem 0rem;
+        margin-right: 3rem;
+    }
+
+    &-card {
         display: flex;
         justify-content: space-between;
-        padding: 0rem 0rem;
-        margin: 5rem 10rem;
-        box-shadow: 10px 10px 8px 10px #888888;
         background-color: #fff;
+        box-shadow: 10px 10px 8px 10px #888888;
+        border-radius: 6px;
+        padding: 3rem;
 
+        @include mixins.responsive(xs) {
+            flex-direction: column-reverse;
+            padding: 0px 5px;
+
+
+        }
 
         & h2 {
             font-size: 2rem;
+
+            @include mixins.responsive(xs) {
+                text-align: center;
+            }
         }
 
         & p {
             font-size: 1rem;
             color: grey;
             margin-bottom: 4rem;
+
+            @include mixins.responsive(xs) {
+                text-align: center;
+                padding: 1rem 2rem;
+            }
         }
 
-        & img {
-            margin-top: 10rem;
-            margin-right: 5rem;
+
+        &--form {
+            display: block;
+
+            @include mixins.responsive(xs) {
+                padding: 1rem 1rem;
+            }
+
+            & button {
+                width: 95%;
+                margin-top: 20px;
+
+                @include mixins.responsive(xs) {
+                    width: 100%;
+                }
+
+            }
         }
 
-        & button {
+        &--img {
             width: 100%;
-            margin-top: 20px;
-        }
-    }
 
-    &-control {
-        display: block;
-        padding: 1rem 6rem;
-        flex-grow: 1;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-        border: 1px solid #888888;
-        outline: none;
+            @include mixins.responsive(xs) {
+                width: 95%;
+                padding-bottom: 1rem;
+            }
 
-
-
-
-        &:hover {
-            border: 1px solid func.theme-colors();
-            box-shadow: 5px 5px 4px 5px #888888;
-        }
-
-
-
-    }
-
-
-
-    &-card {
-        margin: 2rem;
-        padding: 4rem;
-        border-radius: 8px;
-
-        width: 100%;
-
-
-
-        & select {
-            font-size: 1rem;
         }
 
     }
