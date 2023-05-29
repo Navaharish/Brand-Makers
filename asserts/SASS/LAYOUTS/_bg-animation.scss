@@ -4,6 +4,7 @@
     @include mixins.responsive(xs) {
         display: none;
     }
+
 }
 
 main .box1 {
@@ -15,6 +16,11 @@ main .box1 {
     left: 5%;
     top: 20%;
     animation: box-rotate linear 5s infinite;
+
+    @include mixins.responsive(sm) {
+
+        top: 30%;
+    }
 }
 
 .box2 {
@@ -39,6 +45,11 @@ main .box1 {
     bottom: 10%;
     animation: box-rotate linear 5s infinite;
     transform: rotate(0deg);
+
+    @include mixins.responsive(sm) {
+        bottom: -50%;
+        right: 10%;
+    }
 }
 
 .leaf-1 {
@@ -51,6 +62,10 @@ main .box1 {
     bottom: 15%;
     animation: box-rotate linear 7s infinite;
     transform: rotate(0deg);
+
+    @include mixins.responsive(sm) {
+        bottom: 0%;
+    }
 }
 
 .leaf-2 {
@@ -63,6 +78,10 @@ main .box1 {
     left: 45%;
     animation: box-rotate linear 7s infinite;
     transform: rotate(0deg);
+
+    @include mixins.responsive(sm) {
+        top: 25%;
+    }
 }
 
 .cone1 {
@@ -75,6 +94,10 @@ main .box1 {
     bottom: 50%;
     animation: box-rotate linear 5s infinite;
     transform: rotate(0deg);
+
+    @include mixins.responsive(sm) {
+        bottom: -30%;
+    }
 
 }
 
@@ -89,6 +112,11 @@ main .box1 {
     animation: box-rotate linear 5s infinite;
     transform: rotate(0deg);
 
+    @include mixins.responsive(sm) {
+        bottom: -10%;
+        right: 12%;
+    }
+
 }
 
 .dot1 {
@@ -102,6 +130,8 @@ main .box1 {
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
+
+    @include mixins.responsive(sm) {}
 }
 
 

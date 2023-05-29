@@ -15,8 +15,24 @@
 
     }
 
+    @include mixins.responsive(sm) {
+        text-align: center;
+        padding: 10rem 6rem 2rem 6rem;
+        flex-direction: column;
+
+    }
+
+    @include mixins.responsive(lg) {
+
+        padding: 10rem 4rem;
+
+
+    }
+
     &-caption {
         align-items: center;
+
+        @include mixins.responsive(lg) {}
 
 
         &--header {
@@ -31,6 +47,15 @@
                 font-size: 2.8rem;
             }
 
+            @include mixins.responsive(sm) {
+                font-weight: 500;
+                text-align: center;
+                font-size: 2.8rem;
+            }
+
+            @include mixins.responsive(lg) {
+                font-weight: 600;
+            }
         }
 
         &--content {
@@ -44,6 +69,17 @@
                 padding: 0rem 10px;
             }
 
+            @include mixins.responsive(sm) {
+                font-size: 1.3rem;
+                text-align: center;
+                justify-content: center;
+
+            }
+
+            @include mixins.responsive(lg) {
+                font-size: 1.4rem;
+            }
+
         }
     }
 
@@ -55,8 +91,11 @@
         @include mixins.responsive(xs) {
             flex-direction: column;
             align-items: center;
+        }
 
-
+        @include mixins.responsive(sm) {
+            text-align: center;
+            padding: 2rem 5rem;
         }
 
         .btn-primary {
@@ -87,6 +126,14 @@
         @include mixins.responsive(xs) {
             width: 20rem;
             height: auto;
+        }
+
+        @include mixins.responsive(sm) {
+            width: 30rem;
+        }
+
+        @include mixins.responsive(lg) {
+            width: 60rem;
         }
     }
 }

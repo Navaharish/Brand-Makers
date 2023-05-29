@@ -23,7 +23,10 @@
         @include mixins.responsive(xs) {
             flex-direction: column-reverse;
             padding: 0px 5px;
+        }
 
+        @include mixins.responsive(sm) {
+            flex-direction: column-reverse;
 
         }
 
@@ -33,6 +36,7 @@
             @include mixins.responsive(xs) {
                 text-align: center;
             }
+
         }
 
         & p {
@@ -54,11 +58,19 @@
                 padding: 1rem 1rem;
             }
 
+            @include mixins.responsive(sm) {
+                padding: 1rem 1rem;
+            }
+
             & button {
                 width: 95%;
                 margin-top: 20px;
 
                 @include mixins.responsive(xs) {
+                    width: 100%;
+                }
+
+                @include mixins.responsive(sm) {
                     width: 100%;
                 }
 
@@ -73,6 +85,10 @@
                 padding-bottom: 1rem;
             }
 
+            @include mixins.responsive(sm) {
+                width: 100%;
+                padding-bottom: 1rem;
+            }
         }
 
     }

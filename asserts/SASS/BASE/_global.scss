@@ -53,6 +53,11 @@ body {
         padding: 1rem 3rem;
     }
 
+    @include mixins.responsive(sm) {
+        padding: 1rem 4rem;
+        margin-bottom: 1rem;
+    }
+
     &:hover {
         border: 1px solid func.theme-colors();
         box-shadow: 5px 5px 4px 5px #888888;

@@ -24,6 +24,14 @@
 
     }
 
+    @include mixins.responsive(sm) {
+        padding: 1rem 6rem;
+    }
+
+    @include mixins.responsive(lg) {
+        padding: 1rem 2rem;
+    }
+
 
     //brand name
     &-brand {
@@ -34,10 +42,15 @@
         @include mixins.responsive(xs) {
 
             text-align: start;
-
-
         }
 
+        @include mixins.responsive(sm) {
+            padding-right: 6rem;
+        }
+
+        @include mixins.responsive(lg) {
+            padding-right: 3rem;
+        }
 
         &--name {
             margin-left: 1rem;
@@ -48,8 +61,6 @@
             @include mixins.responsive(xs) {
                 font-size: 1.5rem;
                 font-weight: 600;
-
-
             }
 
             .color-animation {
@@ -74,6 +85,15 @@
                 display: none;
             }
 
+            @include mixins.responsive(sm) {
+                width: 90px;
+                height: 60px;
+            }
+
+            @include mixins.responsive(lg) {
+                width: 80px;
+                height: 55px;
+            }
         }
 
     }
@@ -92,21 +112,37 @@
 
         }
 
-
-        &--tites {
+        @include mixins.responsive(sm) {
             display: none;
+
         }
+
+        @include mixins.responsive(lg) {
+            padding-left: 0rem;
+
+        }
+
+
 
         &--item {
             margin-right: 14px;
+
+            @include mixins.responsive(lg) {
+                margin-right: 7px;
+            }
 
         }
 
         &--link {
             color: black;
             padding: 0px 5px;
+
+            @include mixins.responsive(lg) {
+                padding: 0px 5px;
+            }
         }
     }
+
 
 
     .active {
@@ -121,6 +157,12 @@
             font-size: 2rem;
             font-weight: 100;
 
+        }
+
+        @include mixins.responsive(sm) {
+            display: flex;
+            font-size: 2rem;
+            font-weight: 100;
 
         }
     }

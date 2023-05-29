@@ -63,6 +63,12 @@
 
         }
 
+        @include mixins.responsive(sm) {
+            flex-direction: column;
+            padding: 0rem 1.5rem;
+
+        }
+
     }
 
 

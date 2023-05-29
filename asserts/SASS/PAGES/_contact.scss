@@ -18,6 +18,13 @@
         align-items: start;
     }
 
+    @include mixins.responsive(sm) {
+        flex-direction: column;
+
+        padding: 1rem 6rem;
+
+
+    }
 
     &-img {
         width: 50%;
@@ -29,6 +36,10 @@
             padding: 0rem 0rem;
         }
 
+        @include mixins.responsive(sm) {
+            width: 100%;
+            padding: 0rem 0rem;
+        }
     }
 
     &-details {
