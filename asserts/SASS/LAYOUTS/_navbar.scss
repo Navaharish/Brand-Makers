@@ -6,31 +6,32 @@
 .header {
     position: fixed;
     width: 100%;
-    display: flex;
+    z-index: 5;
 
-    z-index: 10;
-    background: #fff;
-    padding: 0rem 10rem;
+    background-color: white;
+    justify-content: space-around;
     display: flex;
     line-height: 1;
-
     align-items: center;
-
     border-bottom: 2px solid #e9e9e9;
 
     @include mixins.responsive(xs) {
-        padding: 1.5rem 0px;
+        padding: 1rem 0px;
         justify-content: space-around;
 
     }
 
     @include mixins.responsive(sm) {
-        padding: 1rem 6rem;
+        padding: 1rem 0rem;
+        justify-content: space-around;
     }
 
     @include mixins.responsive(lg) {
-        padding: 1rem 2rem;
+        justify-content: space-evenly;
+        padding: 1rem 0rem;
     }
+
+
 
 
     //brand name
@@ -57,10 +58,12 @@
             font-size: 18px;
             font-weight: 800;
             line-height: 1;
+            overflow-y: hidden;
 
             @include mixins.responsive(xs) {
                 font-size: 1.5rem;
                 font-weight: 600;
+                margin-left: 0.5rem;
             }
 
             .color-animation {
@@ -69,20 +72,21 @@
                 transition: 500ms;
 
                 @include mixins.responsive(xs) {
-
                     display: none;
-
                 }
 
+                @include mixins.responsive(sm) {}
             }
         }
+
 
         &--logo {
             width: 110px;
             height: 80px;
 
             @include mixins.responsive(xs) {
-                display: none;
+                width: 80px;
+                height: 55px;
             }
 
             @include mixins.responsive(sm) {
@@ -96,6 +100,7 @@
             }
         }
 
+
     }
 
     //nav-menus
@@ -104,8 +109,8 @@
         font-size: 16px;
         font-weight: 600;
         align-items: center;
-        line-height: 1;
-        padding-left: 15rem;
+
+
 
         @include mixins.responsive(xs) {
             display: none;
@@ -114,7 +119,10 @@
 
         @include mixins.responsive(sm) {
             display: none;
+        }
 
+        @include mixins.responsive(md) {
+            display: none;
         }
 
         @include mixins.responsive(lg) {
@@ -122,10 +130,14 @@
 
         }
 
+        & li a .btn-primary {
+            padding: 2rem;
+        }
 
 
         &--item {
-            margin-right: 14px;
+            margin-right: 17px;
+            overflow-y: hidden;
 
             @include mixins.responsive(lg) {
                 margin-right: 7px;
@@ -135,7 +147,7 @@
 
         &--link {
             color: black;
-            padding: 0px 5px;
+            padding: 0px 7px;
 
             @include mixins.responsive(lg) {
                 padding: 0px 5px;
@@ -163,7 +175,12 @@
             display: flex;
             font-size: 2rem;
             font-weight: 100;
+        }
 
+        @include mixins.responsive(md) {
+            display: flex;
+            font-size: 2rem;
+            font-weight: 100;
         }
     }
 
@@ -171,4 +188,5 @@
         display: none;
         text-align: end;
     }
+
 }

@@ -7,7 +7,21 @@
     @include mixins.responsive(xs) {
         padding: 1rem 0px;
         margin-top: 2rem;
+    }
 
+    @include mixins.responsive(sm) {
+        padding: 1rem 3rem;
+        margin-top: 2rem;
+    }
+
+    @include mixins.responsive(lg) {
+        padding: 1rem 3rem;
+        margin-top: 2rem;
+    }
+
+    @include mixins.responsive(xl) {
+        padding: 1rem 5rem;
+        margin-top: 2rem;
     }
 
     &-header {
@@ -54,27 +68,30 @@
     &-cards {
         display: flex;
         justify-content: space-around;
-
         overflow: hidden;
 
         @include mixins.responsive(xs) {
             flex-direction: column;
-            padding: 0rem 1.5rem;
 
+            align-items: center;
         }
 
         @include mixins.responsive(sm) {
             flex-direction: column;
-            padding: 0rem 1.5rem;
-
+            align-items: center;
         }
 
+        @include mixins.responsive(md) {
+            flex-direction: column;
+            padding: 0rem 1.5rem;
+        }
     }
 
 
 
     &-card {
-        max-width: 380px;
+        width: 100%;
+        height: auto;
         border-radius: 8px;
         cursor: pointer;
         margin: 1rem;
@@ -82,6 +99,28 @@
 
         @include mixins.responsive(xs) {
             margin-bottom: 2rem;
+            width: auto;
+            margin: 3rem;
+        }
+
+        @include mixins.responsive(sm) {
+            margin-bottom: 2rem;
+            width: 80%;
+            height: auto;
+        }
+
+        @include mixins.responsive(md) {
+
+            margin-bottom: 3rem;
+
+        }
+
+        @include mixins.responsive(lg) {
+            width: 100%;
+        }
+
+        @include mixins.responsive(xl) {
+            width: 100%;
         }
 
         &:hover {
@@ -93,13 +132,14 @@
         & h2 {
             padding-top: 1rem;
             text-align: center;
+            overflow-y: hidden;
 
         }
 
 
         &--body {
             text-align: center;
-            padding: 1rem 2rem 2rem;
+            padding: 1rem 2rem 1rem;
             color: rgb(70, 70, 70);
 
             @include mixins.responsive(xs) {
@@ -116,7 +156,21 @@
                 margin: 1rem auto;
             }
 
+            @include mixins.responsive(sm) {
+                margin: 1rem auto;
+            }
 
+            @include mixins.responsive(md) {
+                margin: 1rem auto;
+            }
+
+            @include mixins.responsive(lg) {
+                margin: 1rem auto;
+            }
+
+            @include mixins.responsive(xl) {
+                margin: 1rem auto;
+            }
         }
     }
 }

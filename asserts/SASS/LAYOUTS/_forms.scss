@@ -12,6 +12,22 @@
         margin-right: 3rem;
     }
 
+    @include mixins.responsive(sm) {
+        padding: 4rem 3rem;
+    }
+
+    @include mixins.responsive(md) {
+        padding: 4rem 5rem;
+    }
+
+    @include mixins.responsive(lg) {
+        padding: 4rem 6rem;
+    }
+
+    @include mixins.responsive(xl) {
+        padding: 4rem 6rem;
+    }
+
     &-card {
         display: flex;
         justify-content: space-between;
@@ -27,7 +43,19 @@
 
         @include mixins.responsive(sm) {
             flex-direction: column-reverse;
+            padding: 2rem;
+        }
 
+        @include mixins.responsive(md) {
+            flex-direction: column-reverse;
+        }
+
+        @include mixins.responsive(lg) {
+            padding: 3rem 0rem 3rem 3rem;
+        }
+
+        @include mixins.responsive(xl) {
+            padding: 3rem 0rem 3rem 3rem;
         }
 
         & h2 {
@@ -35,6 +63,25 @@
 
             @include mixins.responsive(xs) {
                 text-align: center;
+                padding: 0rem 2rem;
+
+            }
+
+            @include mixins.responsive(sm) {
+                text-align: center;
+            }
+
+            @include mixins.responsive(md) {
+                text-align: center;
+                margin-top: 2rem;
+            }
+
+            @include mixins.responsive(lg) {
+                margin-bottom: 10px;
+            }
+
+            @include mixins.responsive(xl) {
+                margin-bottom: 10px;
             }
 
         }
@@ -47,19 +94,52 @@
             @include mixins.responsive(xs) {
                 text-align: center;
                 padding: 1rem 2rem;
+                margin-bottom: 1rem;
+            }
+
+            @include mixins.responsive(sm) {
+                text-align: center;
+                padding: 1rem 2rem;
+            }
+
+            @include mixins.responsive(md) {
+                text-align: center;
+                padding: 0rem 2rem;
+            }
+
+            @include mixins.responsive(lg) {
+                color: blue;
+            }
+
+            @include mixins.responsive(xl) {
+                color: blue;
             }
         }
 
 
         &--form {
             display: block;
+            margin-right: 5rem;
+
 
             @include mixins.responsive(xs) {
                 padding: 1rem 1rem;
+
+                margin-right: 0rem;
             }
 
             @include mixins.responsive(sm) {
-                padding: 1rem 1rem;
+                padding-left: 2rem;
+            }
+
+            @include mixins.responsive(md) {}
+
+            @include mixins.responsive(lg) {
+                margin-right: -5rem;
+            }
+
+            @include mixins.responsive(xl) {
+                margin-right: -5rem;
             }
 
             & button {
@@ -74,11 +154,23 @@
                     width: 100%;
                 }
 
+                @include mixins.responsive(md) {
+                    width: 100%;
+                }
+
+                @include mixins.responsive(lg) {
+                    width: 80%;
+                }
+
+                @include mixins.responsive(xl) {
+                    width: 80%;
+                }
             }
         }
 
         &--img {
-            width: 100%;
+
+
 
             @include mixins.responsive(xs) {
                 width: 95%;
@@ -88,6 +180,21 @@
             @include mixins.responsive(sm) {
                 width: 100%;
                 padding-bottom: 1rem;
+            }
+
+            @include mixins.responsive(md) {
+                width: 100%;
+                padding-bottom: 1rem;
+            }
+
+            @include mixins.responsive(lg) {
+                width: 80%;
+                margin-top: 5rem;
+            }
+
+            @include mixins.responsive(xl) {
+                width: 80%;
+                margin-top: 5rem;
             }
         }
 

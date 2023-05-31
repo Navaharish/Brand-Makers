@@ -8,6 +8,7 @@ footer {
     line-height: 2;
     text-align: center;
     padding: 1rem 20rem;
+    font-size: 16px;
 
     @include mixins.responsive(xs) {
         width: 100%;
@@ -21,17 +22,45 @@ footer {
         padding: 2rem 0rem;
     }
 
+    @include mixins.responsive(md) {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0rem;
+    }
+
+    @include mixins.responsive(lg) {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0rem;
+    }
+
+    @include mixins.responsive(xl) {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0rem;
+    }
+
     & h1 {
-        font-size: 20px;
+        font-weight: 600;
 
         @include mixins.responsive(xs) {
             font-size: 18px;
         }
 
         @include mixins.responsive(sm) {
-            font-size: 20px;
+            font-size: 23px;
+        }
+
+        @include mixins.responsive(md) {
+            font-size: 28px;
+        }
+
+        @include mixins.responsive(lg) {
+            font-size: 25px;
+        }
+
+        @include mixins.responsive(xl) {
+            font-size: 25px;
         }
     }
-
-
 }
