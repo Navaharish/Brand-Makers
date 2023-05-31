@@ -69,6 +69,10 @@ main .box1 {
     @include mixins.responsive(xl) {
         bottom: -5%;
     }
+
+    @include mixins.responsive(xxl) {
+        bottom: 10%;
+    }
 }
 
 .leaf-1 {
@@ -98,6 +102,10 @@ main .box1 {
     @include mixins.responsive(xl) {
         bottom: -12%;
     }
+
+    @include mixins.responsive(xxl) {
+        bottom: 17%;
+    }
 }
 
 .leaf-2 {
@@ -125,6 +133,10 @@ main .box1 {
 
     @include mixins.responsive(xl) {
         top: 20%;
+    }
+
+    @include mixins.responsive(xxl) {
+        top: 15%;
     }
 }
 
@@ -180,6 +192,10 @@ main .box1 {
 
     @include mixins.responsive(xl) {
         bottom: -10%;
+    }
+
+    @include mixins.responsive(xxl) {
+        bottom: 15%;
     }
 }
 

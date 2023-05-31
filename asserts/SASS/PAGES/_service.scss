@@ -171,6 +171,10 @@
             @include mixins.responsive(xl) {
                 margin: 1rem auto;
             }
+
+            @include mixins.responsive(xxl) {
+                margin: 1rem auto;
+            }
         }
     }
 }

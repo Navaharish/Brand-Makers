@@ -1,3 +1,4 @@
+@use"../ABSTRACTS/function" as func;
 // // X-Small devices (portrait phones, less than 576px)
 // // No media query for `xs` since this is the default in Bootstrap
 // @media (max-width: 576px) {
@@ -60,4 +61,48 @@
             @content;
         }
     }
+}
+
+//menu changing mixins
+
+@mixin menuTogglerScreen {
+
+    position: fixed;
+    z-index: 1;
+    background-color: func.theme-colors();
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 80px;
+    opacity: 0.98;
+
+
+    &.slide {
+        display: block;
+        text-align: center;
+        padding-top: 2rem;
+        transition: 0.5ms;
+
+        & li {
+            padding: 2rem;
+            text-align: center;
+
+            a {
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
+
+                .active {
+                    color: black;
+                }
+            }
+
+            .btn-primary {
+                background-color: rgb(162, 6, 162);
+                padding: 1rem 2rem;
+                border-radius: 8px;
+            }
+        }
+    }
+
 }

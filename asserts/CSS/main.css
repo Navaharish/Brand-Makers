@@ -656,6 +656,14 @@ body {
   resize: none;
 }
 
+.hidden {
+  display: none;
+}
+
+.active {
+  color: rgb(14, 110, 149);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -759,6 +767,11 @@ li {
     padding: 1rem 0rem;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .header {
+    justify-content: space-evenly;
+  }
+}
 .header-brand {
   display: flex;
   align-items: center;
@@ -833,16 +846,109 @@ li {
 @media only screen and (max-width: 576px) {
   .header-menu {
     display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: #046bd2;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 80px;
+    opacity: 0.98;
+  }
+  .header-menu.slide {
+    display: block;
+    text-align: center;
+    padding-top: 2rem;
+    transition: 0.5ms;
+  }
+  .header-menu.slide li {
+    padding: 2rem;
+    text-align: center;
+  }
+  .header-menu.slide li a {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .header-menu.slide li a .active {
+    color: black;
+  }
+  .header-menu.slide li .btn-primary {
+    background-color: rgb(162, 6, 162);
+    padding: 1rem 2rem;
+    border-radius: 8px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .header-menu {
     display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: #046bd2;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 80px;
+    opacity: 0.98;
+  }
+  .header-menu.slide {
+    display: block;
+    text-align: center;
+    padding-top: 2rem;
+    transition: 0.5ms;
+  }
+  .header-menu.slide li {
+    padding: 2rem;
+    text-align: center;
+  }
+  .header-menu.slide li a {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .header-menu.slide li a .active {
+    color: black;
+  }
+  .header-menu.slide li .btn-primary {
+    background-color: rgb(162, 6, 162);
+    padding: 1rem 2rem;
+    border-radius: 8px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .header-menu {
     display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: #046bd2;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 80px;
+    opacity: 0.98;
+  }
+  .header-menu.slide {
+    display: block;
+    text-align: center;
+    padding-top: 2rem;
+    transition: 0.5ms;
+  }
+  .header-menu.slide li {
+    padding: 2rem;
+    text-align: center;
+  }
+  .header-menu.slide li a {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .header-menu.slide li a .active {
+    color: black;
+  }
+  .header-menu.slide li .btn-primary {
+    background-color: rgb(162, 6, 162);
+    padding: 1rem 2rem;
+    border-radius: 8px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -871,9 +977,6 @@ li {
     padding: 0px 5px;
   }
 }
-.header .active {
-  color: rgb(14, 110, 149);
-}
 .header--bars {
   display: none;
 }
@@ -901,6 +1004,27 @@ li {
 .header--tites {
   display: none;
   text-align: end;
+}
+@media only screen and (max-width: 576px) {
+  .header--tites {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .header--tites {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .header--tites {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 100;
+  }
 }
 
 footer {
@@ -1121,12 +1245,22 @@ footer h1 {
     padding-left: 2rem;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .register-card--form {
+    margin-right: -5rem;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .register-card--form {
     margin-right: -5rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .register-card--form {
+    margin-right: -5rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
   .register-card--form {
     margin-right: -5rem;
   }
@@ -1156,6 +1290,11 @@ footer h1 {
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .register-card--form button {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1400px) {
   .register-card--form button {
     width: 80%;
   }
@@ -1263,6 +1402,11 @@ main .box1 {
     bottom: -5%;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .box-3 {
+    bottom: 10%;
+  }
+}
 
 .leaf-1 {
   position: absolute;
@@ -1296,6 +1440,11 @@ main .box1 {
     bottom: -12%;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .leaf-1 {
+    bottom: 17%;
+  }
+}
 
 .leaf-2 {
   position: absolute;
@@ -1326,6 +1475,11 @@ main .box1 {
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .leaf-2 {
     top: 20%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .leaf-2 {
+    top: 15%;
   }
 }
 
@@ -1388,6 +1542,11 @@ main .box1 {
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .cone2 {
     bottom: -10%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .cone2 {
+    bottom: 15%;
   }
 }
 
@@ -1686,6 +1845,11 @@ main .box1 {
     width: 180%;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .about-area--img {
+    width: 100%;
+  }
+}
 .about-area--info {
   color: #fff;
 }
@@ -1919,6 +2083,11 @@ main .box1 {
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .service-card button {
+    margin: 1rem auto;
+  }
+}
+@media only screen and (min-width: 1400px) {
   .service-card button {
     margin: 1rem auto;
   }

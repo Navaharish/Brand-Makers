@@ -67,6 +67,10 @@
         @include mixins.responsive(xl) {
             width: 180%;
         }
+
+        @include mixins.responsive(xxl) {
+            width: 100%;
+        }
     }
 
     &--info {
