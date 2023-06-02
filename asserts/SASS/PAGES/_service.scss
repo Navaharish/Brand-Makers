@@ -30,6 +30,7 @@
 
         @include mixins.responsive(xs) {
             text-align: center;
+            margin-bottom: 0rem;
         }
 
 
@@ -61,7 +62,6 @@
             margin: 35px auto;
             background: linear-gradient(to right, red, blue);
 
-            @include mixins.responsive(xs) {}
         }
     }
 

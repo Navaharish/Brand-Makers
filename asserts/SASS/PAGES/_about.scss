@@ -89,7 +89,6 @@
                 line-height: 1.5;
                 font-size: 2rem;
                 margin-top: 2rem;
-                text-align: center;
             }
 
             @include mixins.responsive(sm) {
@@ -120,9 +119,7 @@
         & p {
             color: #cfcfcf;
 
-            @include mixins.responsive(xs) {
-                text-align: center;
-            }
+            @include mixins.responsive(xs) {}
 
             @include mixins.responsive(sm) {
                 text-align: center;

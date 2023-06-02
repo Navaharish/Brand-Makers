@@ -54,6 +54,7 @@
                 font-weight: 400;
                 text-align: center;
                 font-size: 2.8rem;
+                padding: 0rem 3rem;
             }
 
             @include mixins.responsive(sm) {
@@ -80,7 +81,7 @@
 
             @include mixins.responsive(xs) {
                 font-size: 1.2rem;
-                padding: 0rem 10px;
+                padding: 0rem 3rem;
             }
 
             @include mixins.responsive(sm) {
