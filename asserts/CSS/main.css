@@ -660,6 +660,13 @@ body {
   display: none;
 }
 
+.fa-envelope {
+  font-size: 23px;
+  color: red;
+  margin-right: 1px;
+  margin-top: 1px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -2181,6 +2188,9 @@ main .box1 {
   .contact-detail {
     padding: 15px;
     margin: 40px 20px;
+  }
+  .contact-detail a {
+    color: #23397b;
   }
 }
 .contact-detail:hover {
