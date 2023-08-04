@@ -1,0 +1,114 @@
+@use"../ABSTRACTS/mixins" as mixins;
+
+.description {
+
+    padding: 1rem 10rem;
+
+    @include mixins.responsive(xs) {
+        padding: 1rem;
+    }
+
+    @include mixins.responsive(md) {
+        padding: 2rem 5rem;
+    }
+
+    @include mixins.responsive(lg) {
+        padding: 2rem 5rem;
+    }
+
+    &-card {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-left: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        @include mixins.responsive(xs) {
+            display: block;
+        }
+
+        @include mixins.responsive(md) {
+            display: block;
+        }
+
+        @include mixins.responsive(lg) {
+            padding-top: 5px;
+            box-shadow: 5px 5px 5px 5px #ece;
+        }
+
+        &:hover {
+            transform: translate(0, -25px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 5px 5px 5px 5px #ece;
+        }
+    }
+
+    &-img {
+        margin-right: 12rem;
+        margin-bottom: 2rem;
+        border-radius: 6px;
+
+        @include mixins.responsive(xs) {
+            margin-right: 0rem;
+            display: flex;
+            justify-content: center;
+            border-radius: 20px;
+        }
+
+        @include mixins.responsive(md) {
+            display: flex;
+            justify-content: left;
+            border-radius: 20px;
+        }
+
+        @include mixins.responsive(lg) {
+            margin-right: 5rem;
+        }
+    }
+
+    &-content div {
+        margin-bottom: 2rem;
+        display: flex;
+
+        font-family: Arial, Helvetica;
+
+        @include mixins.responsive(xs) {
+            display: block;
+            margin-left: 1rem;
+        }
+
+        @include mixins.responsive(md) {
+            display: flex;
+            margin: 2rem 1rem;
+        }
+
+        @include mixins.responsive(lg) {
+            max-width: 550px;
+            margin-top: 5px;
+        }
+
+        & h3 {
+            margin-right: 20px;
+            min-width: 200px;
+        }
+
+        & p {
+            font-size: 18px;
+            white-space: pre-line;
+            word-wrap: break-word;
+            line-height: 1.8;
+
+            @include mixins.responsive(xs) {
+                margin-top: 0.5rem;
+            }
+
+            & a {
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
