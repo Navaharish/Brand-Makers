@@ -23,6 +23,7 @@
         padding-left: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
+        border-radius: 10px;
 
         @include mixins.responsive(xs) {
             display: block;
@@ -45,9 +46,8 @@
     }
 
     &-img {
-        margin-right: 12rem;
+        margin-right: 5rem;
         margin-bottom: 2rem;
-        border-radius: 6px;
 
         @include mixins.responsive(xs) {
             margin-right: 0rem;
@@ -68,7 +68,7 @@
     }
 
     &-content div {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         display: flex;
 
         font-family: Arial, Helvetica;
